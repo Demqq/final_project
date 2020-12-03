@@ -1,0 +1,295 @@
+@import 'vars';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-main;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: $btn-color;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: 0.6s;
+
+    //text 
+    color: #ffffff; 
+    font-size: 16px;
+    padding: 14px 18px;
+}
+
+.wrapper {
+    width: 1184px;
+    margin: 0 auto;
+    
+}
+
+.header {
+    background-color: #ffffff;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+
+    img {
+        margin-right: 110px;
+    }
+
+    &__list {
+        display: flex;
+        margin-top: 60px;
+        margin-right: 156px;
+        font-size: 16px;
+        line-height: 80px;
+        color: $main-color;
+
+        &--item {
+            margin-right: 53px;
+            position: relative;
+        }
+
+        &--link {
+            position: relative;
+            transition: 0,6s;
+
+            &::before {
+                content: '';
+                position: absolute;
+                background-image: url(../img/header/arrow-down.svg);
+                background-repeat: no-repeat;
+
+                &:hover::before{
+                    color: saddlebrown;
+                }              
+            }
+        }
+    }
+
+    &__number {
+        margin-right: 35px;
+        color: $main-color;
+        
+    }
+
+    &__btn {
+        
+        &:hover {
+            background-color: #F8AEC3;
+        }
+    }
+}
+
+.user_experience {
+    background: linear-gradient (180deg, rgba(242, 249, 255, 0.12) 0%, #F2F9FF 100%);
+    border-radius: 0px;
+}
+
+.main {
+    padding-top: 144px;
+    padding-bottom: 52px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+
+    &__title {
+        font-size: 56px;
+        line-height: 105%;
+        color: $main-color;
+        text-align: center;
+        padding-bottom: 28px;
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 150%;
+        color: $second-main-color;
+        padding-bottom: 28px;
+    }
+
+    &__btns {
+        line-height: 50px;
+
+        &--buy {
+            width: 150px;
+            margin-right: 30px;
+
+            &:hover {
+                background-color: #F8AEC3;
+                
+            }
+        }
+
+        &--see {
+            background: transparent;
+            color: $second-main-color;
+
+            &:hover {
+                background-color: #F8AEC3;
+                color: #ffffff;
+                border-radius: 100px;
+                padding: 14px 18px;
+            }
+        }
+    }
+}
+
+.partners {
+    text-align: center;
+    padding-bottom: 172px;
+    
+    &__text {
+        font-size: 16px;
+        line-height: 27px;
+        color: rgba(69, 88, 128, 0.5);
+        padding-bottom: 50px;
+    }
+
+    &__logos {
+        display: flex;
+        justify-content: space-between;
+
+        &--logo {
+            transition: 0.6s;
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.3);
+                transition: 0.6s;
+            }
+        }
+    }
+}
+
+.service {
+
+    padding-bottom: 34px;
+    position: relative;
+
+    &__title {
+        text-align: center;
+        font-size: 48px;
+        line-height: 60px;
+        color: $main-color;
+        padding-bottom: 36px;
+    }
+
+    &__about {
+        display: flex;
+        justify-content: space-between;
+
+        &--team {
+            position: relative;
+
+            .team__img--first {
+                position: absolute;
+                z-index: -1s;
+                width: 331px;
+                top: 36px;
+                left: 260px;
+                transition: 0.7s;
+
+                background-image: url(/img/main/main-girl-bg.svg);
+                background-repeat: no-repeat;
+                background-position: center bottom;
+
+                &:hover {
+                    transform: scale(1.1);
+                    z-index: 3;
+                    cursor: pointer;
+                }
+
+                &:not(:hover) {
+                    transform: scale(1);
+                    z-index: 2;
+                }                             
+            }
+            
+            .team__img--second {
+                position: absolute;
+                z-index: 2;
+                width: 266px;
+                top: 398px;
+                left: 83px;
+                transition: 0.7s;
+
+                background-image: url(/img/main/main-man-bg.svg);
+                background-repeat: no-repeat;
+                background-position: center bottom left;
+
+                &:hover {
+                    transform: scale(1.1);
+                    z-index: 30;
+                    cursor: pointer;
+                }
+
+                &:not(:hover) {
+                    transform: scale(1);
+                    z-index: 2;
+                }
+            }
+
+            .team__img--second-circle {
+                position: absolute;
+                z-index: 2;
+                top: 663px;
+                left: 210px;               
+            }
+
+            .team__img--third {
+                position: absolute;
+                top: 653px;
+                left: 459px;
+                transition: 0.7s;
+
+                background-image: url(/img/main/main-man-second-bg.svg);
+                background-repeat: no-repeat;
+                background-position: center bottom;
+
+                &:hover {
+                    transform: scale(1.1);
+                    z-index: 30;
+                    cursor: pointer;
+                }
+
+                &:not(:hover) {                  
+                    transform: scale(1);
+                }
+            }
+
+            .team__img--thrird-triangle {
+                position: absolute;
+                z-index: -1;
+                top: 751px;
+                left: 440px;
+            }
+        }  
+
+        &__list {
+
+            width: 405px;
+
+            &__item {
+
+                &__title {
+
+                    font-size: 22px;
+                    line-height: 125%;
+                    color: $main-color;
+                }
+            }
+        }
+    }
+}
