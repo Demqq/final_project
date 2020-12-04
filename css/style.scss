@@ -10,6 +10,8 @@ body {
 
 a {
     text-decoration: none;
+    color: inherit;
+
 }
 
 ul {
@@ -22,7 +24,7 @@ button {
     background-color: $btn-color;
     border-radius: 100px;
     cursor: pointer;
-    transition: 0.6s;
+    transition: 0.7s;
 
     //text 
     color: #ffffff; 
@@ -53,27 +55,30 @@ button {
         margin-top: 60px;
         margin-right: 156px;
         font-size: 16px;
-        line-height: 80px;
-        color: $main-color;
 
         &--item {
             margin-right: 53px;
             position: relative;
+            color: $main-color;
+
+            &:last-child {
+                margin-right: 0;
+            }  
         }
 
         &--link {
             position: relative;
-            transition: 0,6s;
 
-            &::before {
-                content: '';
+            &:hover::before{
+                content:'';
                 position: absolute;
                 background-image: url(../img/header/arrow-down.svg);
                 background-repeat: no-repeat;
+                width: 9px;
+                height: 10px;
+                top: -19px;
+                right: 50%;
 
-                &:hover::before{
-                    color: saddlebrown;
-                }              
             }
         }
     }
@@ -81,7 +86,6 @@ button {
     &__number {
         margin-right: 35px;
         color: $main-color;
-        
     }
 
     &__btn {
@@ -129,7 +133,6 @@ button {
 
             &:hover {
                 background-color: #F8AEC3;
-                
             }
         }
 
@@ -190,92 +193,7 @@ button {
         display: flex;
         justify-content: space-between;
 
-        &--team {
-            position: relative;
-
-            .team__img--first {
-                position: absolute;
-                z-index: -1s;
-                width: 331px;
-                top: 36px;
-                left: 260px;
-                transition: 0.7s;
-
-                background-image: url(../img/main/main-girl-bg.svg);
-                background-repeat: no-repeat;
-                background-position: center bottom;
-
-                &:hover {
-                    transform: scale(1.1);
-                    z-index: 3;
-                    cursor: pointer;
-                }
-
-                &:not(:hover) {
-                    transform: scale(1);
-                    z-index: 2;
-                }                             
-            }
-            
-            .team__img--second {
-                position: absolute;
-                z-index: 2;
-                width: 266px;
-                top: 398px;
-                left: 83px;
-                transition: 0.7s;
-
-                background-image: url(../img/main/main-man-bg.svg);
-                background-repeat: no-repeat;
-                background-position: center bottom left;
-
-                &:hover {
-                    transform: scale(1.1);
-                    z-index: 30;
-                    cursor: pointer;
-                }
-
-                &:not(:hover) {
-                    transform: scale(1);
-                    z-index: 2;
-                }
-            }
-
-            .team__img--second-circle {
-                position: absolute;
-                z-index: 2;
-                top: 663px;
-                left: 210px;               
-            }
-
-            .team__img--third {
-                position: absolute;
-                top: 653px;
-                left: 459px;
-                transition: 0.7s;
-
-                background-image: url(../img/main/main-man-second-bg.svg);
-                background-repeat: no-repeat;
-                background-position: center bottom;
-
-                &:hover {
-                    transform: scale(1.1);
-                    z-index: 30;
-                    cursor: pointer;
-                }
-
-                &:not(:hover) {                  
-                    transform: scale(1);
-                }
-            }
-
-            .team__img--thrird-triangle {
-                position: absolute;
-                z-index: -1;
-                top: 751px;
-                left: 440px;
-            }
-        }  
+        
 
         &__list {
 
@@ -291,5 +209,102 @@ button {
                 }
             }
         }
+    }
+
+    &__team {
+        position: relative;
+        left: -100px;
+
+        &--first {
+            position: absolute;
+            z-index: -1s;
+            width: 331px;
+            top: 36px;
+            left: 260px;
+            transition: 0.7s;
+
+            background-image: url(../img/main/main-girl-bg.svg);
+            background-repeat: no-repeat;
+            background-position: center bottom;
+
+            &:hover {
+                transform: scale(1.1);
+                z-index: 3;
+                cursor: pointer;
+            }
+
+            &:not(:hover) {
+                transform: scale(1);
+                z-index: 2;
+            }                             
+        }
+        
+        &--second {
+            position: absolute;
+            z-index: 2;
+            width: 266px;
+            top: 398px;
+            left: 83px;
+            transition: 0.7s;
+
+            background-image: url(../img/main/main-man-bg.svg);
+            background-repeat: no-repeat;
+            background-position: center bottom left;
+
+            &:hover {
+                transform: scale(1.1);
+                z-index: 30;
+                cursor: pointer;
+            }
+
+            &:not(:hover) {
+                transform: scale(1);
+                z-index: 2;
+            }
+        }
+
+        &--second-circle {
+            position: absolute;
+            z-index: 2;
+            top: 663px;
+            left: 210px;               
+        }
+
+        &--third {
+            position: absolute;
+            top: 653px;
+            left: 459px;
+            transition: 0.7s;
+
+            background-image: url(../img/main/main-man-second-bg.svg);
+            background-repeat: no-repeat;
+            background-position: center bottom;
+
+            &:hover {
+                transform: scale(1.1);
+                z-index: 30;
+                cursor: pointer;
+            }
+
+            &:not(:hover) {                  
+                transform: scale(1);
+            }
+        }
+
+        &--thrird-triangle {
+            position: absolute;
+            z-index: -1;
+            top: 751px;
+            left: 440px;
+        }
+    }  
+
+    .service__description {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        display: flex;
     }
 }

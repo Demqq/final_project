@@ -8,6 +8,7 @@ body {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 ul {
@@ -20,7 +21,7 @@ button {
   background-color: #3751FF;
   border-radius: 100px;
   cursor: pointer;
-  transition: 0.6s;
+  transition: 0.7s;
   color: #ffffff;
   font-size: 16px;
   padding: 14px 18px;
@@ -49,29 +50,31 @@ button {
   margin-top: 60px;
   margin-right: 156px;
   font-size: 16px;
-  line-height: 80px;
-  color: #1E266D;
 }
 
 .navigation__list--item {
   margin-right: 53px;
   position: relative;
+  color: #1E266D;
+}
+
+.navigation__list--item:last-child {
+  margin-right: 0;
 }
 
 .navigation__list--link {
   position: relative;
-  transition: 0,6s;
 }
 
-.navigation__list--link::before {
+.navigation__list--link:hover::before {
   content: '';
   position: absolute;
   background-image: url(../img/header/arrow-down.svg);
   background-repeat: no-repeat;
-}
-
-.navigation__list--link::before:hover::before {
-  color: saddlebrown;
+  width: 9px;
+  height: 10px;
+  top: -19px;
+  right: 50%;
 }
 
 .navigation__number {
@@ -182,90 +185,6 @@ button {
   justify-content: space-between;
 }
 
-.service__about--team {
-  position: relative;
-}
-
-.service__about--team .team__img--first {
-  position: absolute;
-  z-index: -1s;
-  width: 331px;
-  top: 36px;
-  left: 260px;
-  transition: 0.7s;
-  background-image: url(/img/main/main-girl-bg.svg);
-  background-repeat: no-repeat;
-  background-position: center bottom;
-}
-
-.service__about--team .team__img--first:hover {
-  transform: scale(1.1);
-  z-index: 3;
-  cursor: pointer;
-}
-
-.service__about--team .team__img--first:not(:hover) {
-  transform: scale(1);
-  z-index: 2;
-}
-
-.service__about--team .team__img--second {
-  position: absolute;
-  z-index: 2;
-  width: 266px;
-  top: 398px;
-  left: 83px;
-  transition: 0.7s;
-  background-image: url(/img/main/main-man-bg.svg);
-  background-repeat: no-repeat;
-  background-position: center bottom left;
-}
-
-.service__about--team .team__img--second:hover {
-  transform: scale(1.1);
-  z-index: 30;
-  cursor: pointer;
-}
-
-.service__about--team .team__img--second:not(:hover) {
-  transform: scale(1);
-  z-index: 2;
-}
-
-.service__about--team .team__img--second-circle {
-  position: absolute;
-  z-index: 2;
-  top: 663px;
-  left: 210px;
-}
-
-.service__about--team .team__img--third {
-  position: absolute;
-  top: 653px;
-  left: 459px;
-  transition: 0.7s;
-  background-image: url(/img/main/main-man-second-bg.svg);
-  background-repeat: no-repeat;
-  background-position: center bottom;
-}
-
-.service__about--team .team__img--third:hover {
-  transform: scale(1.1);
-  z-index: 30;
-  cursor: pointer;
-}
-
-.service__about--team .team__img--third:not(:hover) {
-  transform: scale(1);
-}
-
-.service__about--team .team__img--thrird-triangle {
-  position: absolute;
-  z-index: -1;
-  top: 751px;
-  left: 440px;
-}
-
 .service__about__list {
   width: 405px;
 }
@@ -274,5 +193,99 @@ button {
   font-size: 22px;
   line-height: 125%;
   color: #1E266D;
+}
+
+.service__team {
+  position: relative;
+  left: -100px;
+}
+
+.service__team--first {
+  position: absolute;
+  z-index: -1s;
+  width: 331px;
+  top: 36px;
+  left: 260px;
+  transition: 0.7s;
+  background-image: url(../img/main/main-girl-bg.svg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.service__team--first:hover {
+  transform: scale(1.1);
+  z-index: 3;
+  cursor: pointer;
+}
+
+.service__team--first:not(:hover) {
+  transform: scale(1);
+  z-index: 2;
+}
+
+.service__team--second {
+  position: absolute;
+  z-index: 2;
+  width: 266px;
+  top: 398px;
+  left: 83px;
+  transition: 0.7s;
+  background-image: url(../img/main/main-man-bg.svg);
+  background-repeat: no-repeat;
+  background-position: center bottom left;
+}
+
+.service__team--second:hover {
+  transform: scale(1.1);
+  z-index: 30;
+  cursor: pointer;
+}
+
+.service__team--second:not(:hover) {
+  transform: scale(1);
+  z-index: 2;
+}
+
+.service__team--second-circle {
+  position: absolute;
+  z-index: 2;
+  top: 663px;
+  left: 210px;
+}
+
+.service__team--third {
+  position: absolute;
+  top: 653px;
+  left: 459px;
+  transition: 0.7s;
+  background-image: url(../img/main/main-man-second-bg.svg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.service__team--third:hover {
+  transform: scale(1.1);
+  z-index: 30;
+  cursor: pointer;
+}
+
+.service__team--third:not(:hover) {
+  transform: scale(1);
+}
+
+.service__team--thrird-triangle {
+  position: absolute;
+  z-index: -1;
+  top: 751px;
+  left: 440px;
+}
+
+.service .service__description {
+  display: flex;
+  flex-direction: column;
+}
+
+.service__item {
+  display: flex;
 }
 /*# sourceMappingURL=style.css.map */
