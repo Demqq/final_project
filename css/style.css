@@ -88,6 +88,7 @@ button {
 
 .user_experience {
   background: linear-gradient(180deg, rgba(242, 249, 255, 0.12) 0%, #f2f9ff 100%);
+  background-position: center bottom 200px;
   border-radius: 0px;
 }
 
@@ -322,5 +323,116 @@ button {
   font-size: 18px;
   line-height: 180%;
   color: #455880;
+}
+
+.launch {
+  background: #3751FF;
+  padding: 88px 0 115px 0;
+}
+
+.order {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order__launch {
+  font-size: 48px;
+  line-height: 60px;
+  color: #ffffff;
+}
+
+.order__peek {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.order__peek--btn {
+  position: relative;
+  padding: 17px 31px 13px 51px;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 17px;
+  font-size: 18px;
+  line-height: 110%;
+  color: #455880;
+}
+
+.order__peek--btn::before {
+  content: '';
+  position: absolute;
+  background: url(../img/lounch/mail.svg);
+  width: 27px;
+  height: 16px;
+  left: 15px;
+}
+
+.order__peek--btn:hover {
+  background-color: #F8AEC3;
+  color: #ffffff;
+}
+
+.order__peek > p {
+  font-size: 16px;
+  line-height: 125%;
+  color: #DFE0EB;
+}
+
+.order__peek a {
+  color: #FED385;
+}
+
+.order__peek a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 124px 0 77px 0;
+  font-size: 18px;
+  line-height: 225%;
+  color: #455880;
+}
+
+.footer__description {
+  width: 310px;
+}
+
+.footer__description > img {
+  margin-bottom: 33px;
+}
+
+.footer .first__element {
+  margin-bottom: 33px;
+  font-size: 22px;
+  line-height: 125%;
+  color: #1E266D;
+}
+
+.footer__item a:hover {
+  text-decoration: underline;
+}
+
+.footer__resources img {
+  margin-right: 24px;
+}
+
+.footer__resources img:hover {
+  transform: scale(1.2);
+  transition: 0.6s;
+  cursor: pointer;
+}
+
+.footer__resources img:not(:hover) {
+  transition: 0.6s;
+}
+
+.footer__resources img:last-child {
+  margin-right: 0;
+}
+
+.footer__resources--item:hover {
+  text-decoration: underline;
 }
 /*# sourceMappingURL=style.css.map */
