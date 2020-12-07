@@ -454,11 +454,28 @@ button {
 .footer__bottom {
   display: flex;
   justify-content: space-between;
-  padding-top: 53px;
+  padding: 53px 0 107px 0;
+}
+
+.footer__bottom--copyright {
+  font-size: 14px;
+  line-height: 27px;
+  color: rgba(69, 88, 128, 0.5);
 }
 
 .footer__bottom--privacy {
   display: flex;
   justify-content: space-between;
+  font-size: 14px;
+  line-height: 27px;
+  color: #455880;
+}
+
+.footer__bottom--privacy P {
+  margin-right: 30px;
+}
+
+.footer__bottom--privacy P a:hover {
+  text-decoration: underline;
 }
 /*# sourceMappingURL=style.css.map */

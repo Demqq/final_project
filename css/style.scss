@@ -497,11 +497,28 @@ button {
     &__bottom {
         display: flex;
         justify-content: space-between;
-        padding-top: 53px;
+        padding: 53px 0 107px 0;
+
+        &--copyright {
+            font-size: 14px;
+            line-height: 27px;
+            color: rgba(69, 88, 128, 0.5);
+        }
 
         &--privacy {
             display: flex;
             justify-content: space-between;
+            font-size: 14px;
+            line-height: 27px;
+            color: $second-main-color;
+
+            P {
+                margin-right: 30px;
+
+                a:hover {
+                    text-decoration: underline;
+                }
+            }
         }
     }
 }
